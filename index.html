@@ -1,0 +1,29 @@
+print("===============================")
+print("Bem vindo a calculadora !\n===============================")
+
+def calculadora():
+    op = input("Qual operação deseja usar ?" " + , - , * ou / ?\n")
+    n1 = eval(input("Digite um número que deseja usar na operação\n"))
+    n2 = eval(input("Digite outro número que deseja usar na operação\n"))
+    resposta = 0
+    match op:
+        case '+':
+            resposta = n1 + n2
+        case '-':
+            resposta = n1 - n2
+        case '/':
+            resposta = n1 / n2
+        case '*':
+            resposta = n1 * n2
+        case _:
+            print("Sua operação está inválida pois não está escrita devidamente correta.\nFavor repetir a ação novamente.")
+    print("O resultado é", resposta)
+
+calculadora()
+
+rep=input("Deseja fazer uma operação novamente?\n").lower()
+if rep=="Sim":
+    while rep=="sim":
+        calculadora()
+else:
+    print("Operação encerrada , obrigado !")
